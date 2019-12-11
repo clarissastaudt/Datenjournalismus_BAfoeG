@@ -4,6 +4,7 @@
     <v-layout>
          <v-row>
             <v-flex xs12>
+                <router-link to="/" style="text-decoration: none;">
                 <v-parallax src="../src/assets/uni.jpg">
 
                   <v-row
@@ -20,13 +21,14 @@
 
                   </v-row>
                 </v-parallax>
+                </router-link>
               </v-flex>
           </v-row>
       </v-layout>
       <v-layout>
 
               <router-view></router-view>
-        
+
       </v-layout>
 
 

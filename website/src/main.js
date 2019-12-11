@@ -6,12 +6,12 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 Vue.config.productionTip = false
 
-import HelloWorld from './components/HelloWorld.vue'
+import Home from './components/Home.vue'
 import Impressum from './components/Impressum.vue'
 
 const router = new VueRouter({
   routes: [
-    { path: '/', component: HelloWorld },
+    { path: '/', component: Home },
     { path: '/impressum', component: Impressum}
   ]
 })
