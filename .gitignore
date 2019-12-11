@@ -1,1 +1,5 @@
 website/node_modules
+website/.firebaserc
+website/.gitignore
+.gitignore
+website/.firebase/hosting.ZGlzdA.cache
