@@ -53,10 +53,10 @@ createRatioPlot <- function(year, colorscale) {
     color = "black",
     size = 0.5,
     alpha = 1,) +
-    labs(x = "", y = "", fill = "", title = year) +
+    labs(x = "", y = "", fill = "") + #, title = year
     scale_fill_manual(values=colorscale)+
     theme_void() +
-    theme(legend.position = "bottom")  #legend.position="none")
+    theme(legend.position = "bottom")#legend.position="none")
 }
 
 ###############################################################################################################################################

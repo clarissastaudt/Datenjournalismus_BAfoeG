@@ -21,7 +21,7 @@ source(helpers.R)
 ###############################################################################################################################################
 ######### Data import + cleaning #########
 
-bafog <- read_csv2("bafog.csv", skip = 7, n_max = 448, col_names = FALSE, locale = locale(encoding = "latin1"), na = c("."))  %>% select(Bundesland = X1, Jahr = X2, gefordertePersonen = X9)
+bafog <- read_csv2("bafog.csv", skip = 7, n_max = 448, col_names = FALSE, locale = locale(encoding = "latin1"), na = c("."))  %>% select(Bundesland = X1, Jahr = X2, gefordertePersonen = X9, Vollforderung = X10, Monatsbestand = X12, Kosten = X13)
 studis <- read_csv2("studis.csv", skip = 7, n_max = 343, col_names = FALSE, locale = locale(encoding = "latin1")) %>% select(Bundesland = X1, Jahr = X2, Studis = X5)
 nettoeinkommen <- read_csv2("nettoeinkommen.csv", skip = 0, col_names = TRUE, locale = locale(encoding = "latin1"))
 wohnformen <- read_csv2("wohnformen.csv", skip = 0, col_names = TRUE, locale = locale(encoding = "latin1")) %>% mutate(Ausserhalb = Privat + WG + Wohnheim)
@@ -44,7 +44,7 @@ osmmap <- openmap(upperLeft = c(55.154, 5.691), lowerRight = c(47.160, 15.095), 
 ###############################################################################################################################################
 ######### Plots #########
 
-scale_full <- c("#ffffff", "#E1F5FE", "#81D4FA", "#29B6F6", "#0288D1", "#01579B", "#00335c")
+scale_full <- c("#ffffff", "#E1F5FE", "#81D4FA", "#29B6F6", "#0288D1", "#0266b5", "#014880", "#00335c")
 scale_greater15 <- scale_full[-1]
 scale_greater20 <- scale_greater15[-1]
 createRatioPlot(1998, scale_greater15)
@@ -68,7 +68,6 @@ createRatioPlot(2015, scale_greater15)
 createRatioPlot(2016, scale_greater15)
 createRatioPlot(2017, scale_greater15)
 createRatioPlot(2018, scale_greater15)
-
 
 ###############################################################################################################################################
 
@@ -106,3 +105,39 @@ mean(linearMod$residuals)
 par(mfrow=c(2,2)) # Change the panel layout to 2 x 2
 plot(linearMod)
 par(mfrow=c(1,1)) # Change back to 1 x 1
+
+###############################################################################################################################################
+# Kosten BAföG 2018 + durchschnittlicher monatlicher Förderbeitrag
+
+bafog18 <- bafog %>% filter(Jahr == 2018)
+
+print("Gesamtausgaben Studierenden-BAföG 2018 [in Tsd. ???]")
+sum(bafog18$Kosten)
+
+print("Durchschnittlicher monatlicher Förderbetrag nach Jahressumme")
+sum(bafog18$Kosten) * 1000 / sum(bafog18$gefordertePersonen) / 12
+
+print("Durchschnittlicher monatlicher Förderbetrag nach Monatsbestand")
+sum(bafog18$Kosten) * 1000 / sum(bafog18$Monatsbestand) / 12
+
+###############################################################################################################################################
+# Vollförderung
+
+i <- 1
+voll <- c()
+for (year in c(1998:2018)) {
+  semester <- calcWS(year)
+  currBafog <- bafog %>% filter(Jahr == year)
+  currPercentage <- ((sum(currBafog$Vollforderung)) / sum(currBafog$gefordertePersonen))
+  voll[i] <- currPercentage
+  i <- i + 1
+}
+Jahr <- c(1998:2018)
+voll <- data.frame(Jahr, voll)
+
+
+x11()
+ggplot(data=voll, aes(x=Jahr, y=voll)) +
+  geom_line(color="#03a9f4") +
+  scale_x_continuous(breaks = c(1998:2018))+
+  xlab("") + ylab("") + theme(text = element_text(size=16))

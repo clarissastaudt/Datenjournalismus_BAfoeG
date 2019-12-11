@@ -1,12 +1,13 @@
 <template>
-      <v-container>
+      <v-row>
+
         <v-layout
           text-center
           wrap
         >
 
               <v-flex
-                xs12
+                xs6 offset-xs3
               >
 
                 <blockquote class="blockquote pa-0" id="summary">
@@ -21,13 +22,14 @@
                 </blockquote>
                 <div style="height: 60px; max-height: 10vh"></div>
 
-                <h1 class="font-weight-light light-blue--text" style="text-align:left">Wie hat sich der Anteil der BAföG-Empfänger*innen unter den Studierenden entwickelt?</h1>
+                <h1 class="font-weight-light light-blue--text" style="text-align:left">Bekommen heute weniger Studierende BAföG?</h1>
 
                 <v-container
                     id="scroll-target"
                     style="padding: 0"
                 >
                 <br>
+
                 <h3 style="margin-bottom: -100px; text-align:left; width: 93%; position: relative; left: 7%"  v-scroll="onScrollVerlauf">Deutschlandweite Entwicklung des Anteils der BAföG-Empfänger*innen unter den Studierenden</h3>
                 <div style="font-weight: bold; text-align: left; position: relative; top: 270px;  transform-origin: 0 0; transform: rotate(-90deg); font-size: 15px;">Anteil der <br>BAföG-Empfänger</div>
                 <div style="width: 93%; position: relative; left: 7%">
@@ -233,114 +235,416 @@
                         größer 45% bis 50%
                     </div>
                 </v-flex>
-                <v-flex xs12 md5 style="text-align: left">
-                   <p class="pa-5" v-if="slider.value == 0">
-                    1998 sind Dinge passiert, die hier erklärt werden. Lorem ipsum
-                   </p>
-                   <p class="pa-5" v-if="slider.value == 5">
-                    1999 sind Dinge passiert, die hier erklärt werden. Lorem ipsum
-                   </p>
-                   <p class="pa-5" v-if="slider.value == 10">
-                    2000 sind Dinge passiert, die hier erklärt werden. Lorem ipsum
-                   </p>
-                   <p class="pa-5" v-if="slider.value == 15">
-                    2001 sind Dinge passiert, die hier erklärt werden. Wiki: Nach der Bundestagswahl 1998 bildete Gerhard Schröder die erste rot-grüne Regierungskoalition. Sie beschloss 2001 eine weitreichende Reform, die viele Einschränkungen der Kohl-Ära zurücknahm. Zusätzliche Veränderungen erfolgten etwa durch die Freistellung des Kindergeldes bei der Einkommensanrechnung. Zudem müssen seither insgesamt nur maximal 10.000 Euro des Darlehens zurückgezahlt werden. Nach dieser Reform gewann das BAföG wieder wesentlich an Bedeutung. Im Jahr 2003 erhielten bereits mehr als 25 % der Studenten Förderung nach dem BAföG.
-                   </p>
-                   <p class="pa-5" v-if="slider.value == 20">
-                    2002 sind Dinge passiert, die hier erklärt werden. Lorem ipsum
-                   </p>
-                   <p class="pa-5" v-if="slider.value == 25">
-                    2003 sind Dinge passiert, die hier erklärt werden. Lorem ipsum
-                   </p>
-                   <p class="pa-5" v-if="slider.value == 30">
-                    2004 sind Dinge passiert, die hier erklärt werden. Lorem ipsum
-                   </p>
-                   <p class="pa-5" v-if="slider.value == 35">
-                    2005 sind Dinge passiert, die hier erklärt werden. Lorem ipsum
-                   </p>
-                   <p class="pa-5" v-if="slider.value == 40">
-                    2006 sind Dinge passiert, die hier erklärt werden. Lorem ipsum
-                   </p>
-                   <p class="pa-5" v-if="slider.value == 45">
-                    2007 sind Dinge passiert, die hier erklärt werden. Lorem ipsum
-                   </p>
-                   <p class="pa-5" v-if="slider.value == 50">
-                    2008 sind Dinge passiert, die hier erklärt werden. Lorem ipsum
-                   </p>
-                   <p class="pa-5" v-if="slider.value == 55">
-                    2009 sind Dinge passiert, die hier erklärt werden. Lorem ipsum
-                   </p>
-                   <p class="pa-5" v-if="slider.value == 60">
-                    2010 sind Dinge passiert, die hier erklärt werden. Wiki: 2010 beschloss die Bundesregierung Merkel eine Novelle des BAföG. Die allgemeine Altersgrenze von 30 Jahren wurde für Masterstudiengänge auf 35 Jahre angehoben. Begabungs- und leistungsabhängige Stipendien bis zu 300 Euro monatlich werden seither von einer Anrechnung auf den Bedarfssatz nach BAföG ausgenommen. Die für die Ehe und für Ehegatten geltenden Regelungen im BAföG gelten nun auch für Partner einer eingetragenen Lebenspartnerschaft.[
-                   </p>
-                   <p class="pa-5" v-if="slider.value == 65">
-                    2011 sind Dinge passiert, die hier erklärt werden. Lorem ipsum
-                   </p>
-                   <p class="pa-5" v-if="slider.value == 70">
-                    2012 sind Dinge passiert, die hier erklärt werden. Wiki: Bis zum Jahr 2012 wurde ein Teilerlass für das zinslose staatliche Darlehen gewährt, wenn die Abschlussprüfung besonders gut oder die Ausbildung besonders schnell abgeschlossen wurde.
-                   </p>
-                   <p class="pa-5" v-if="slider.value == 75">
-                    2013 sind Dinge passiert, die hier erklärt werden. Lorem ipsum
-                   </p>
-                   <p class="pa-5" v-if="slider.value == 80">
-                    2014 sind Dinge passiert, die hier erklärt werden. Wiki: Mit dem 25. BAföG-Änderungsgesetz stimmte der Bundesrat am 19. Dezember 2014 der vollständigen Finanzierung der Ausbildungsförderung durch den Bund zu. Damit werden die Länder um jährlich rund 1,2 Milliarden Euro entlastet, die für zusätzliche Investitionen in die Hochschulen verwendet werden solle
-                   <p class="pa-5" v-if="slider.value == 85">
-                    2015 sind Dinge passiert, die hier erklärt werden. Lorem ipsum
-                   </p>
-                   <p class="pa-5" v-if="slider.value == 90">
-                    2016 sind Dinge passiert, die hier erklärt werden. Wiki: Im August 2014 gab Bundesbildungsministerin Wanka bekannt, dass die Ausbildungsförderung ab Herbst 2016 um insgesamt 7 % angehoben wird. In diesem soll der Wohnzuschlag-Höchstsatz um 11 % angehoben werden. Nach amtlicher Berechnung soll der Anstieg der Verbraucherpreise seit der letzten Erhöhung 2010 bis 2014 bereits 7 % betragen. Zum Schuljahr bzw. Wintersemester 2016/17 hebt der Bund die Bedarfsätze und Freibeträge um 7 % an. Damit wird die Zahl der potentiellen Empfänger um rund 110.000 Studierende und Schüler erweitert. Drittstaatenangehörige mit Aufenthaltstiteln aus humanitären oder familiären Gründen können künftig bereits nach 15 Monaten statt bisher vier Jahren Aufenthalt in Deutschland BAföG beantragen.
-                   </p>
-                   <p class="pa-5" v-if="slider.value == 95">
-                    2017 sind Dinge passiert, die hier erklärt werden. Lorem ipsum
-                   </p>
-                   <p class="pa-5" v-if="slider.value == 100">
-                    2018 sind Dinge passiert, die hier erklärt werden. Lorem ipsum
-                   </p>
+                <v-flex xs12 md5 style="text-align: left" class="align-self-stretch">
+                   <div class="pa-5" v-if="slider.value == 0">
+                       <h2>1998</h2>
+                       <p>Lorem ipsum</p>
+                   </div>
+                   <div class="pa-5" v-if="slider.value == 5">
+                       <h2>1999</h2>
+                       <p>Lorem ipsum</p>
+                   </div>
+                   <div class="pa-5" v-if="slider.value == 10">
+                       <h2>2000</h2>
+                       <p>Lorem ipsum</p>
+                   </div>
+                   <div class="pa-5" v-if="slider.value == 15">
+                       <h2>2001</h2>
+                       <p>Wiki: Nach der Bundestagswahl 1998 bildete Gerhard Schröder die erste rot-grüne Regierungskoalition. Sie beschloss 2001 eine weitreichende Reform, die viele Einschränkungen der Kohl-Ära zurücknahm. Zusätzliche Veränderungen erfolgten etwa durch die Freistellung des Kindergeldes bei der Einkommensanrechnung. Zudem müssen seither insgesamt nur maximal 10.000 Euro des Darlehens zurückgezahlt werden. Nach dieser Reform gewann das BAföG wieder wesentlich an Bedeutung. Im Jahr 2003 erhielten bereits mehr als 25 % der Studenten Förderung nach dem BAföG.</p>
+                   </div>
+                   <div class="pa-5" v-if="slider.value == 20">
+                       <h2>2002</h2>
+                       <p>Lorem ipsum</p>
+                   </div>
+                   <div class="pa-5" v-if="slider.value == 25">
+                       <h2>2003</h2>
+                       <p>Lorem ipsum</p>
+                   </div>
+                   <div class="pa-5" v-if="slider.value == 30">
+                       <h2>2004</h2>
+                       <p>Lorem ipsum</p>
+                   </div>
+                   <div class="pa-5" v-if="slider.value == 35">
+                       <h2>2005</h2>
+                       <p>Lorem ipsum</p>
+                   </div>
+                   <div class="pa-5" v-if="slider.value == 40">
+                       <h2>2006</h2>
+                       <p>Lorem ipsum</p>
+                   </div>
+                   <div class="pa-5" v-if="slider.value == 45">
+                       <h2>2007</h2>
+                       <p>Lorem ipsum</p>
+                   </div>
+                   <div class="pa-5" v-if="slider.value == 50">
+                       <h2>2008</h2>
+                       <p>Lorem ipsum</p>
+                   </div>
+                   <div class="pa-5" v-if="slider.value == 55">
+                       <h2>2009</h2>
+                       <p>Lorem ipsum</p>
+                   </div>
+                   <div class="pa-5" v-if="slider.value == 60">
+                       <h2>2010</h2>
+                       <p>Wiki: 2010 beschloss die Bundesregierung Merkel eine Novelle des BAföG. Die allgemeine Altersgrenze von 30 Jahren wurde für Masterstudiengänge auf 35 Jahre angehoben. Begabungs- und leistungsabhängige Stipendien bis zu 300 Euro monatlich werden seither von einer Anrechnung auf den Bedarfssatz nach BAföG ausgenommen. Die für die Ehe und für Ehegatten geltenden Regelungen im BAföG gelten nun auch für Partner einer eingetragenen Lebenspartnerschaft.x</p>
+                   </div>
+                   <div class="pa-5" v-if="slider.value == 65">
+                       <h2>2011</h2>
+                       <p>Lorem ipsum</p>
+                   </div>
+                   <div class="pa-5" v-if="slider.value == 70">
+                       <h2>2012</h2>
+                       <p>Wiki: Bis zum Jahr 2012 wurde ein Teilerlass für das zinslose staatliche Darlehen gewährt, wenn die Abschlussprüfung besonders gut oder die Ausbildung besonders schnell abgeschlossen wurde.
+                       </p>
+                   </div>
+                   <div class="pa-5" v-if="slider.value == 75">
+                       <h2>2013</h2>
+                       <p>Lorem ipsum</p>
+                   </div>
+                   <div class="pa-5" v-if="slider.value == 80">
+                       <h2>2014</h2>
+                       <p> Wiki: Mit dem 25. BAföG-Änderungsgesetz stimmte der Bundesrat am 19. Dezember 2014 der vollständigen Finanzierung der Ausbildungsförderung durch den Bund zu. Damit werden die Länder um jährlich rund 1,2 Milliarden Euro entlastet, die für zusätzliche Investitionen in die Hochschulen verwendet werden solle
+                       </p>
+                    </div>
+                   <div class="pa-5" v-if="slider.value == 85">
+                       <h2>2015</h2>
+                       <p>Lorem ipsum</p>
+                   </div>
+                   <div class="pa-5" v-if="slider.value == 90">
+                       <h2>2016</h2>
+                       <p>Wiki: Im August 2014 gab Bundesbildungsministerin Wanka bekannt, dass die Ausbildungsförderung ab Herbst 2016 um insgesamt 7 % angehoben wird. In diesem soll der Wohnzuschlag-Höchstsatz um 11 % angehoben werden. Nach amtlicher Berechnung soll der Anstieg der Verbraucherpreise seit der letzten Erhöhung 2010 bis 2014 bereits 7 % betragen. Zum Schuljahr bzw. Wintersemester 2016/17 hebt der Bund die Bedarfsätze und Freibeträge um 7 % an. Damit wird die Zahl der potentiellen Empfänger um rund 110.000 Studierende und Schüler erweitert. Drittstaatenangehörige mit Aufenthaltstiteln aus humanitären oder familiären Gründen können künftig bereits nach 15 Monaten statt bisher vier Jahren Aufenthalt in Deutschland BAföG beantragen.
+                       </p>
+                   </div>
+                   <div class="pa-5" v-if="slider.value == 95">
+                       <h2>2017</h2>
+                       <p>Lorem ipsum</p>
+                   </div>
+                   <div class="pa-5" v-if="slider.value == 100">
+                       <h2>2018</h2>
+                       <p>Lorem ipsum</p>
+                   </div>
                 </v-flex>
               </v-row>
               </v-container>
 
+              <div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+            <br>
+
+            <v-bottom-sheet v-model="sheet">
+              <template v-slot:activator="{ on }">
+                <v-btn
+                  v-on="on"
+                >
+                  <i class="fas fa-plus" style="margin-right: 10px"></i>Methodik
+                </v-btn>
+              </template>
+
+              <v-sheet class="pa-10">
+
+
+                  <i class="fas fa-times fa-lg float-right" @click="sheet = !sheet"></i>
+
+
+                <v-row align="left" justify="left">
+                    <v-flex xs4 class="pa-3">
+                        <div>
+                            <i class="fas fa-list-ol icon"></i>
+                            Vorgehen
+                        </div>
+                        <br>
+                        <div style="font-size:smaller">
+                            <h4> Wie wird der Anteil der BAföG-Empfänger*innen berechnet?</h4>
+                            <p>
+                                Um den Anteil der Studierenden zu berechnen, die durch BAföG gefördert werden, werden zwei Datensätze des statistischen Bundesamts kombiniert.
+                                Dabei enthält der BAföG-Datensatz die absolute Zahl der in einem Kalenderjahr geförderten Studierenden.
+                                Der Studierendendatensatz liefert für das Wintersemester des selben Jahres die Anzahl der Studierenden mit deutscher Staatsbürgerschaft.
+                                Durch die Division beider Werte ergibt sich der Anteil der BAföG-Empfänger*innen.
+                            </p>
+
+                            <h4>Wieso wird nur die Anzahl der deutschen Studierenden betrachtet?</h4>
+                            <p>
+                                In den vergangenen Jahren ist die Zahl der ausländischen Studierenden stark angestiegen. Mitglieder dieses Personenkreises können jedoch nur in Ausnahmefällen BAföG beantragen.
+                                Um die Zahl der Studierenden, die theoretisch BAföG beantragen können, möglichst gut abzuschätzen, wurden daher nur Studierende mit deutscher Staatsbürgerschaft in die Berechnung einbezogen.
+                                Durch diese Maßnahme wird der Anteil der BAföG-Empfänger*innen tendenziell überschätzt.
+                            </p>
+                        </div>
+                    </v-flex>
+                   <v-flex xs4 class="pa-3">
+                       <div>
+                           <i class="fas fa-file-alt icon"></i>
+                           Quellen
+                       </div>
+                       <br>
+                       <p style="font-size:smaller">
+                           Irgendwas zum Zeug in den Texten... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                       </p>
+                   </v-flex>
+                   <v-flex xs4 class="pa-3">
+                        <div>
+                            <i class="fas fa-database icon"></i>
+                            Daten
+                        </div>
+                        <br>
+                        <div style="font-size:smaller">
+                            <ul>
+                                <li>
+                                  Statistisches Bundesamt. (2019).
+                                  <span style="font-style: italic;">
+                                      Studierende: Bundesländer, Semester, Nationalität, Geschlecht (21311-0005).
+                                  </span>
+                                  Abgerufen unter:
+                                  <a href="https://www-genesis.destatis.de/genesis/online/data?operation=find&suchanweisung_language=de&query=21311-0005"> https://www-genesis.destatis.de/genesis/online/data?operation=find&suchanweisung_language=de&query=21311-0005</a>.
+                              </li>
+                              <li>
+                                Statistisches Bundesamt. (2019).
+                                <span style="font-style: italic;">
+                                    BAföG - Geförderte Personen und finanzieller Aufwand: Bundesländer, Jahre, Personenkreis (21411-0002).
+                                </span>
+                                Abgerufen unter:
+                                <a href="https://www-genesis.destatis.de/genesis/online/data?operation=find&suchanweisung_language=de&query=+21411-0002"> https://www-genesis.destatis.de/genesis/online/data?operation=find&suchanweisung_language=de&query=+21411-0002</a>.
+                            </li>
+                          </ul>
+                          <br><br>
+                          <span>
+                              <i class="fab fa-github icon"></i>
+                              <a href="https://github.com/clarissastaudt/Datenjournalismus_BAfoeG">Code</a>
+                          </span>
+                    </div>
+                  </v-flex>
+                </v-row>
+              </v-sheet>
+          </v-bottom-sheet>
+
+          <br>
+          <br>
               <v-expansion-panels>
                   <v-expansion-panel>
-                    <v-expansion-panel-header>Daten</v-expansion-panel-header>
-                    <v-expansion-panel-content>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    <v-expansion-panel-header class="panelhead">
+                        <span><i class="fas fa-database icon"></i>Daten</span>
+                    </v-expansion-panel-header>
+                    <v-expansion-panel-content class="panelcontent">
+                        <ul>
+                            <li>
+                              Statistisches Bundesamt. (2019).
+                              <span style="font-style: italic;">
+                                  Studierende: Bundesländer, Semester, Nationalität, Geschlecht (21311-0005).
+                              </span>
+                              Abgerufen unter:
+                              <a href="https://www-genesis.destatis.de/genesis/online/data?operation=find&suchanweisung_language=de&query=21311-0005"> https://www-genesis.destatis.de/genesis/online/data?operation=find&suchanweisung_language=de&query=21311-0005</a>.
+                          </li>
+                          <li>
+                            Statistisches Bundesamt. (2019).
+                            <span style="font-style: italic;">
+                                BAföG - Geförderte Personen und finanzieller Aufwand: Bundesländer, Jahre, Personenkreis (21411-0002).
+                            </span>
+                            Abgerufen unter:
+                            <a href="https://www-genesis.destatis.de/genesis/online/data?operation=find&suchanweisung_language=de&query=+21411-0002"> https://www-genesis.destatis.de/genesis/online/data?operation=find&suchanweisung_language=de&query=+21411-0002</a>.
+                        </li>
+                      </ul>
                     </v-expansion-panel-content>
                   </v-expansion-panel>
                   <v-expansion-panel>
-                    <v-expansion-panel-header>Methode</v-expansion-panel-header>
-                    <v-expansion-panel-content>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    <v-expansion-panel-header class="panelhead">
+                        <span><i class="fas fa-file-alt icon"></i>Quellen</span>
+                    </v-expansion-panel-header>
+                    <v-expansion-panel-content class="panelcontent">
+                      Irgendwas zum Zeug in den Texten... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </v-expansion-panel-content>
+                  </v-expansion-panel>
+                  <v-expansion-panel>
+                    <v-expansion-panel-header class="panelhead">
+                        <span><i class="fas fa-list-ol icon"></i>Methode</span>
+                    </v-expansion-panel-header>
+                    <v-expansion-panel-content class="panelcontent">
+                        <h4> Wie wird der Anteil der BAföG-Empfänger*innen berechnet?</h4>
+                        <p>
+                            Um den Anteil der Studierenden zu berechnen, die durch BAföG gefördert werden, werden zwei Datensätze des statistischen Bundesamts kombiniert.
+                            Dabei enthält der BAföG-Datensatz die absolute Zahl der in einem Kalenderjahr geförderten Studierenden.
+                            Der Studierendendatensatz liefert für das Wintersemester des selben Jahres die Anzahl der Studierenden mit deutscher Staatsbürgerschaft.
+                            Durch die Division beider Werte ergibt sich der Anteil der BAföG-Empfänger*innen.
+                        </p>
+
+                        <h4>Wieso wird nur die Anzahl der deutschen Studierenden betrachtet?</h4>
+                        <p>
+                            In den vergangenen Jahren ist die Zahl der ausländischen Studierenden stark angestiegen. Mitglieder dieses Personenkreises können jedoch nur in Ausnahmefällen BAföG beantragen.
+                            Um die Zahl der Studierenden, die theoretisch BAföG beantragen können, möglichst gut abzuschätzen, wurden daher nur Studierende mit deutscher Staatsbürgerschaft in die Berechnung einbezogen.
+                            Durch diese Maßnahme wird der Anteil der BAföG-Empfänger*innen tendenziell überschätzt.
+                        </p>
+
+                        <span>
+                            <i class="fab fa-github icon"></i>
+                            <a href="https://github.com/clarissastaudt/Datenjournalismus_BAfoeG">Code</a>
+                        </span>
                     </v-expansion-panel-content>
                   </v-expansion-panel>
                </v-expansion-panels>
 
               <br><br>
-              <h1 class="font-weight-light light-blue--text" style="text-align:left">Warum gibt es Unterschiede zwischen den Bundesländern?</h1>
+              <h1 class="font-weight-light light-blue--text" style="text-align:left">Warum bekommen Studierende im Osten häufiger BAföG?</h1>
+              <br>
+              <div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+              <br>
 
               <v-expansion-panels>
                   <v-expansion-panel>
-                    <v-expansion-panel-header>Daten</v-expansion-panel-header>
-                    <v-expansion-panel-content>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    <v-expansion-panel-header class="panelhead">
+                        <span><i class="fas fa-database icon"></i>Daten</span>
+                    </v-expansion-panel-header>
+                    <v-expansion-panel-content class="panelcontent">
+                        <ul>
+                            <li>
+                              Statistisches Bundesamt. (2019).
+                              <span style="font-style: italic;">
+                                  Studierende: Bundesländer, Semester, Nationalität, Geschlecht (21311-0005).
+                              </span>
+                              Abgerufen unter:
+                              <a href="https://www-genesis.destatis.de/genesis/online/data?operation=find&suchanweisung_language=de&query=21311-0005"> https://www-genesis.destatis.de/genesis/online/data?operation=find&suchanweisung_language=de&query=21311-0005</a>.
+                          </li>
+                          <li>
+                            Statistisches Bundesamt. (2019).
+                            <span style="font-style: italic;">
+                                BAföG - Geförderte Personen und finanzieller Aufwand: Bundesländer, Jahre, Personenkreis (21411-0002).
+                            </span>
+                            Abgerufen unter:
+                            <a href="https://www-genesis.destatis.de/genesis/online/data?operation=find&suchanweisung_language=de&query=+21411-0002"> https://www-genesis.destatis.de/genesis/online/data?operation=find&suchanweisung_language=de&query=+21411-0002</a>.
+                        </li>
+                      </ul>
                     </v-expansion-panel-content>
                   </v-expansion-panel>
                   <v-expansion-panel>
-                    <v-expansion-panel-header>Methode</v-expansion-panel-header>
-                    <v-expansion-panel-content>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    <v-expansion-panel-header class="panelhead">
+                        <span><i class="fas fa-list-ol icon"></i>Methode</span>
+                    </v-expansion-panel-header>
+                    <v-expansion-panel-content class="panelcontent">
+                     Multiple lineare Regression
                     </v-expansion-panel-content>
                   </v-expansion-panel>
                </v-expansion-panels>
+
+               <br>
+               <br>
+               <h1 class="font-weight-light light-blue--text" style="text-align:left">Wer bekommt wie viel Geld?</h1>
+               <br>
+               <v-layout>
+                   <v-flex
+                     xs4
+                    style="margin: 0px 10px 0px 0px;" class="box-statistic">
+                        <h2 >
+                            <countTo  ref='countbafogaverage' :startVal='countbafogaverage.startVal' :endVal='countbafogaverage.endVal' :duration='3000'>
+                            </countTo>€
+                        </h2>
+                        <div style="font-size: smaller">haben 2018 BAföG-Empfänger*innen im Schnitt monatlich erhalten</div>
+                    </v-flex>
+                    <v-flex
+                      xs4
+                     style="margin: 0px 10px 0px 10px;" class="box-statistic">
+                         <h2 >
+                             <countTo  ref='countbafog' :startVal='countBafog.startVal' :endVal='countBafog.endVal' :duration='3000'>
+                             </countTo>€
+                         </h2>
+                         <div style="font-size: smaller">beträgt der BAföG-Höchstsatz im Jahr 2019</div>
+                     </v-flex>
+                   <v-flex xs4 class="box-statistic" style="margin: 0px 0px 0px 10px">
+                       <h2 >
+                           <countTo ref='countkosten' :startVal='countKosten.startVal' :endVal='countKosten.endVal' :duration='3000' separator=".">
+                           </countTo>€
+                       </h2>
+                       <div style="font-size: smaller">Broken (see other onScroll Events); TODO; See: https://github.com/BKWLD/vue-in-viewport-mixin <br>hat der Staat 2018 für studentisches BAföG ausgegeben</div>
+                   </v-flex>
+                </v-layout>
+                <br>
+                <h3 style="text-align:left; width: 93%; position: relative; left: 7%">Anteil der BAföG-Empfänger*innen mit Vollförderung</h3>
+                <div style="font-weight: bold; text-align: left; position: relative; top: 250px;  transform-origin: 0 0; transform: rotate(-90deg); font-size: 15px;">Anteil der BAföG-Empfänger<br>mit Vollförderung</div>
+                <v-img
+                  src="../assets/voll.png"
+                  contain
+                  style="width: 93%; position: relative; left: 7%;"
+                ></v-img>
+                <div style="font-weight: bold;  font-size: 15px; position: relative; top: -15px;">Jahr</div>
+               <div v-scroll="onScrollGeld">
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+             </div>
+               <br>
+
+               <v-expansion-panels>
+                   <v-expansion-panel>
+                     <v-expansion-panel-header class="panelhead">
+                         <span><i class="fas fa-database icon"></i>Daten</span>
+                     </v-expansion-panel-header>
+                     <v-expansion-panel-content class="panelcontent">
+                         <ul>
+                           <li>
+                             Statistisches Bundesamt. (2019).
+                             <span style="font-style: italic;">
+                                 BAföG - Geförderte Personen und finanzieller Aufwand: Bundesländer, Jahre, Personenkreis (21411-0002).
+                             </span>
+                             Abgerufen unter:
+                             <a href="https://www-genesis.destatis.de/genesis/online/data?operation=find&suchanweisung_language=de&query=+21411-0002"> https://www-genesis.destatis.de/genesis/online/data?operation=find&suchanweisung_language=de&query=+21411-0002</a>.
+                         </li>
+                       </ul>
+                     </v-expansion-panel-content>
+                   </v-expansion-panel>
+                   <v-expansion-panel>
+                     <v-expansion-panel-header class="panelhead">
+                         <span><i class="fas fa-list-ol icon"></i>Methode</span>
+                     </v-expansion-panel-header>
+                     <v-expansion-panel-content class="panelcontent">
+                         <h4> Wie werden die Gesamtkosten bestimmt?</h4>
+                         <p>
+                             Das statistische Bundesamt erhebt jedes Jahr auf Bundeslandsebene den finanziellen Aufwand für die studentische BAföG-Förderung.
+                             Dies erlaubt durch einfache Addition die Bestimmung der Gesamtkosten.
+                        </p>
+                        <h4>Wie wird die durchschnittliche monatliche Förderhöhe berechnet?</h4>
+                        <p>
+                             Oft werden Studierende nicht über das gesamte Kalenderjahr gefördert, z.B. wenn sich ihre oder die finanzielle Situation der Eltern verändert, sie ihr Studium beenden oder sie wieder zu Hause wohnen.
+                             Hierzu dividiert man die Gesamtkosten der BAföG-Förderung durch den durchschnittlichen Monatsbestand an Studierenden.
+                        <h4>Wie kommt der BAföG-Höchstsatz zu Stande?</h4>
+                        <p>
+                             Der BAföG-Höchstsatz bezeichnet die Summe aus dem Grundbedarf, der Wohnpauschale und dem Zuschlag zur Kranken- bzw. Pflegeversicherung.
+                             Die maximale Wohnpauschale wird nur dann gewährt, wenn Studierende nicht mehr bei ihren Eltern wohnen.
+                             Einen Kranken- bzw. Pflegeversicherungszuschlag erhält, wer sich bereits selbst versichern muss, z.B. weil er über 25 Jahre alt ist.
+                        </p>
+
+                        <table>
+                            <tr><td></td><td>Grundbedarf</td><td>419€</td></tr>
+                            <tr><td>+</td><td>Wohnpauschale</td><td>325€</td></tr>
+                            <tr><td>+</td><td>Kranken- und Pflegeversicherungszuschlag </td><td>109€</td></tr>
+                            <tr class="border_top"><td>=</td><td>BAföG-Höchstsatz</td><td>853€</td></tr>
+                        </table>
+                        <br>
+                         <h4> Wie ermittelt man den Anteil der BAföG-Empfänger*innen mit Vollförderung?</h4>
+                         <p>
+                            Der Anteil der BAföG-Empfänger*innen mit Vollförderung ergibt sich aus der Division der Anzahl der Studierenden mit Vollförderung durch die Anzahl der BAföG-Empfänger*innen in einem Jahr.
+                         </p>
+                     </v-expansion-panel-content>
+                   </v-expansion-panel>
+                </v-expansion-panels>
 
              </v-flex>
 
 
         </v-layout>
-    </v-container>
+    </v-row>
 </template>
 
 <style type="text/css">
+    tr.border_top td {
+      border-top: 1px solid #e0e0e0;
+      padding-top: 5px;
+    }
+    td {
+        padding-right: 10px;
+    }
 	#summary {
 		font-size: 150%;
 		text-align: left;
@@ -369,6 +673,21 @@
         width: 20px;
         border: 1px solid black;
         display: inline-block;
+    }
+    .panelhead {
+        font-weight: bold;
+    }
+
+    .icon {
+        margin-right: 10px;
+    }
+
+    .panelcontent {
+        text-align: left;
+    }
+
+    .box-statistic {
+        border: 1px solid #b3e5fc; padding: 15px 20px 20px;
     }
 
 	@media (max-width: 360px) {
@@ -578,6 +897,7 @@
 </style>
 
 <script>
+import countTo from 'vue-count-to'
 const yearsShort = [
           '98',
           '99',
@@ -604,8 +924,22 @@ const yearsShort = [
 
 export default {
   name: 'HelloWorld',
+  components: { countTo },
 
   data: () => ({
+     sheet: false,
+     countBafog: {
+         startVal: 0,
+         endVal: 853
+     },
+     countbafogaverage: {
+         startVal: 0,
+         endVal: 493
+     },
+     countKosten: {
+         startVal: 0,
+         endVal: 2001734000
+     },
     verlauf: false,
     slider: {
         value: 0,
@@ -630,6 +964,11 @@ export default {
     onScrollVerlauf () {
         this.verlauf = true
     },
+    onScrollGeld () {
+            this.$refs.countkosten.start();
+            this.$refs.countbafog.start();
+            this.$refs.countbafogaverage.start();
+        }
   },
   mounted: () => {
   }
