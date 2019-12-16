@@ -128,7 +128,7 @@
                         <br><br>
                         <span>
                             <i class="fab fa-github icon"></i>
-                            <a href="https://github.com/clarissastaudt/Datenjournalismus_BAfoeG">Code</a>
+                            <a href="https://github.com/clarissastaudt/Datenjournalismus_BAfoeG/blob/master/R/money.R">Code</a>
                         </span>
                   </div>
                 </v-flex>

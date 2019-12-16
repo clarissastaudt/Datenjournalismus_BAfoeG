@@ -5,7 +5,7 @@ setwd("C:/Users/clari/Desktop/data_prepared/Datenjournalismus_BAfoeG/data")
 
 library(tidyverse)
 library(gvlma)
-source(helpers.R)
+source("../R/helpers.R")
 
 
 ###############################################################################################################################################
@@ -44,16 +44,15 @@ x11()
 plot(gvmodel)
 summary(gvmodel)
 
-# Not all predictors are significant???
-# And: Moderate predictor correlation
+# Not all predictors are significant?
+# Correlation
 cor(df_model_Bundesland$WG, df_model_Bundesland$Eltern)
 
 # Model without WG
 linearMod <- lm(Anteil_Bafog ~ Nettoeinkommen + Eltern + Akademiker, data=df_model_Bundesland)  
 summary(linearMod)
 # Akademiker no longer significant... 
-# see also Cook's distance... Saarland is an outlier: High rates live with parents.
-
+# Cook's distance -> Saarland is an outlier: High rates live with parents.
 
 # Model without Akademiker
 linearMod <- lm(Anteil_Bafog ~ Nettoeinkommen + Eltern, data=df_model_Bundesland)  
