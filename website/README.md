@@ -1,4 +1,7 @@
-# myapp
+# BAföG
+
+## Website
+Available under (https://datenjournalismus-bafog.firebaseapp.com/#/)[https://datenjournalismus-bafog.firebaseapp.com/#/]
 
 ## Project setup
 ```
