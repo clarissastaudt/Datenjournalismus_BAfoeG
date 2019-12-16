@@ -35,7 +35,7 @@ osmmap <- openmap(upperLeft = c(55.154, 5.691), lowerRight = c(47.160, 15.095), 
 
 bafog18 <- bafog %>% filter(Jahr == 2018)
 
-print("Complete cost for student BAföG in 2018 [in thousand ???]")
+print("Complete cost for student BAfÃ¶G in 2018 [in thousand ???]")
 sum(bafog18$Kosten)
 
 print("Average monthly grant based on the average amount of monthly supported students")
