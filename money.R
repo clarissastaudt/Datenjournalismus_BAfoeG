@@ -3,12 +3,8 @@
 
 setwd("C:/Users/clari/Desktop/data_prepared/Datenjournalismus_BAfoeG/data")
 
-library(tidyverse) # Sammlung an Paketen aus dem tidyerse
-library(RColorBrewer) # Sinnvolle Farbpaletten
-library(geosphere)
+library(tidyverse)
 library(rgdal)
-library(OpenStreetMap)
-library(ggpolypath)
 source(helpers.R)
 
 
@@ -17,18 +13,6 @@ source(helpers.R)
 
 bafog <- read_csv2("bafog.csv", skip = 7, n_max = 448, col_names = FALSE, locale = locale(encoding = "latin1"), na = c("."))  %>% select(Bundesland = X1, Jahr = X2, gefordertePersonen = X9, Vollforderung = X10, Monatsbestand = X12, Kosten = X13)
 studis <- read_csv2("studis.csv", skip = 7, n_max = 343, col_names = FALSE, locale = locale(encoding = "latin1")) %>% select(Bundesland = X1, Jahr = X2, Studis = X5)
-
-###############################################################################################################################################
-######### Load map data #########
-
-# Shape of Germany
-area2 <- loadShapeGermany()
-
-# Background map
-osmmap <- openmap(upperLeft = c(55.154, 5.691), lowerRight = c(47.160, 15.095), zoom = 7, 
-                  type = "osm",
-                  minNumTiles = 9L, mergeTiles = TRUE)
-
 
 ###############################################################################################################################################
 ######### Costs and average monthly grant 2018 #########
