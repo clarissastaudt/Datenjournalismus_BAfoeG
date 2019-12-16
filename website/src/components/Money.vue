@@ -2,7 +2,7 @@
     <div>
         <h1 class="font-weight-light light-blue--text" style="text-align:left">Wer bekommt wie viel Geld?</h1>
         <br>
-        <v-layout>
+        <v-layout id="counter">
             <v-flex
               xs4
              style="margin: 0px 10px 0px 0px;" class="box-statistic">
@@ -26,7 +26,7 @@
                     <countTo ref='countkosten' :startVal='countKosten.startVal' :endVal='countKosten.endVal' :duration='3000' separator=".">
                     </countTo>€
                 </h2>
-                <div style="font-size: smaller">Broken (see other onScroll Events); TODO; See: https://github.com/BKWLD/vue-in-viewport-mixin <br>hat der Staat 2018 für studentisches BAföG ausgegeben</div>
+                <div style="font-size: smaller">hat der Staat 2018 für studentisches BAföG ausgegeben</div>
             </v-flex>
          </v-layout>
          <br>
@@ -38,7 +38,7 @@
            style="width: 93%; position: relative; left: 7%;"
          ></v-img>
          <div style="font-weight: bold;  font-size: 15px; position: relative; top: -15px;">Jahr</div>
-        <div v-scroll="onScrollGeld">
+        <div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -175,12 +175,35 @@ td {
       }),
       methods: {
         onScrollGeld () {
-                this.$refs.countkosten.start();
-                this.$refs.countbafog.start();
-                this.$refs.countbafogaverage.start();
+
+            },
+        },
+        mounted: function () {
+                /* eslint-disable no-console */
+                let interval = window.setInterval(() => {
+                    let el = document.getElementById("counter");
+                    var r;
+                    var html;
+                    if ( !el || 1 !== el.nodeType ) { return false; }
+                    html = document.documentElement;
+                    r = el.getBoundingClientRect();
+
+                    let inView = ( !!r
+                      && r.bottom >= 0
+                      && r.right >= 0
+                      && r.top <= html.clientHeight
+                      && r.left <= html.clientWidth
+                    )
+
+                    if (inView) {
+                        this.$nextTick(function() {
+                            this.$refs.countkosten.start();
+                            this.$refs.countbafog.start();
+                            this.$refs.countbafogaverage.start();
+                            clearInterval(interval);
+                        })
+                    }
+                }, 500)
             }
-      },
-      mounted: () => {
-      }
-    };
+  }
     </script>

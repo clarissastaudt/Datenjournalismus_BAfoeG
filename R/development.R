@@ -1,10 +1,13 @@
+# Plots card containing the ratio of students receiving BAföG aid by state for a given year 
+# and also calculates its development over the years.
+
 ###############################################################################################################################################
 ######### Imports #########
 
 setwd("C:/Users/clari/Desktop/data_prepared/Datenjournalismus_BAfoeG/data")
 
-library(tidyverse) # Sammlung an Paketen aus dem tidyerse
-library(RColorBrewer) # Sinnvolle Farbpaletten
+library(tidyverse) 
+library(RColorBrewer) 
 library(geosphere)
 library(rgdal)
 library(OpenStreetMap)
@@ -31,36 +34,35 @@ osmmap <- openmap(upperLeft = c(55.154, 5.691), lowerRight = c(47.160, 15.095), 
 
 
 ###############################################################################################################################################
-######### Costs and average monthly grant 2018 #########
+######### Plots #########
 
-bafog18 <- bafog %>% filter(Jahr == 2018)
+# Plot Germany maps
+scale_full <- c("#ffffff", "#E1F5FE", "#81D4FA", "#29B6F6", "#0288D1", "#0266b5", "#014880", "#00335c")
+scale_greater15 <- scale_full[-1]
+scale_greater20 <- scale_greater15[-1]
+createRatioPlot(1998, scale_greater15)
+createRatioPlot(1999, scale_greater15)
+createRatioPlot(2000, scale_greater15)
+createRatioPlot(2001, scale_greater15)
+createRatioPlot(2002, scale_greater15)
+createRatioPlot(2003, scale_greater15)
+createRatioPlot(2004, scale_greater20)
+createRatioPlot(2005, scale_greater20)
+createRatioPlot(2006, scale_greater20)
+createRatioPlot(2007, scale_greater20)
+createRatioPlot(2008, scale_greater20)
+createRatioPlot(2009, scale_greater20)
+createRatioPlot(2010, scale_greater20)
+createRatioPlot(2011, scale_greater20)
+createRatioPlot(2012, scale_greater20)
+createRatioPlot(2013, scale_greater20) 
+createRatioPlot(2014, scale_greater15)
+createRatioPlot(2015, scale_greater15)
+createRatioPlot(2016, scale_greater15)
+createRatioPlot(2017, scale_greater15)
+createRatioPlot(2018, scale_greater15)
 
-print("Complete cost for student BAföG in 2018 [in thousand ???]")
-sum(bafog18$Kosten)
-
-print("Average monthly grant based on the average amount of monthly supported students")
-sum(bafog18$Kosten) * 1000 / sum(bafog18$Monatsbestand) / 12
-
-print("Average monthly grant based on total of supported students for that year")
-sum(bafog18$Kosten) * 1000 / sum(bafog18$gefordertePersonen) / 12
-
-###############################################################################################################################################
-# Maximum grant
-
-i <- 1
-full <- c()
-for (year in c(1998:2018)) {
-  semester <- calcWS(year)
-  currBafog <- bafog %>% filter(Jahr == year)
-  currPercentage <- ((sum(currBafog$Vollforderung)) / sum(currBafog$gefordertePersonen))
-  full[i] <- currPercentage
-  i <- i + 1
-}
-Jahr <- c(1998:2018)
-full <- data.frame(Jahr, full)
-
-x11()
-ggplot(data=full, aes(x=Jahr, y=full)) +
-  geom_line(color="#03a9f4") +
-  scale_x_continuous(breaks = c(1998:2018))+
-  xlab("") + ylab("") + theme(text = element_text(size=16))
+# Plot Germany wide development over the years
+gefordert <- calcPercantageGermany(bafog, studis)
+print(gefordert)
+plot(gefordert)
