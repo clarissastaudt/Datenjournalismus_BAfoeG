@@ -61,7 +61,6 @@ export default {
   components: {Development, Money, ModelBL},
 
   data: () => ({
-
   }),
   methods: {
 

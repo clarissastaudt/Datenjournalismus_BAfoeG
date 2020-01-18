@@ -30,14 +30,50 @@
             </v-flex>
          </v-layout>
          <br>
-         <h3 style="text-align:left; width: 93%; position: relative; left: 7%">Anteil der BAföG-Empfänger*innen mit Vollförderung</h3>
-         <div style="font-weight: bold; text-align: left; position: relative; top: 250px;  transform-origin: 0 0; transform: rotate(-90deg); font-size: 15px;">Anteil der BAföG-Empfänger<br>mit Vollförderung</div>
-         <v-img
-           src="../assets/voll.png"
-           contain
-           style="width: 93%; position: relative; left: 7%;"
-         ></v-img>
-         <div style="font-weight: bold;  font-size: 15px; position: relative; top: -15px;">Jahr</div>
+
+         <h3 style="text-align:left; width: 93%; position: relative; left: 7%">Mittlerer monatlicher BAföG-Satz im Zeitverlauf</h3>
+         <div style="font-weight: bold; text-align: left; position: relative; top: 250px;  transform-origin: 0 0; transform: rotate(-90deg); font-size: 15px;">Mittlerer monatlicher BAföG-Satz</div>
+         <div>
+             <div id="av500">
+                 <div class="av">500€</div>
+                 <hr class="descr">
+             </div>
+             <div id="av450">
+                 <div class="av">450€</div>
+                 <hr class="descr">
+             </div>
+             <div id="av400">
+                 <div class="av">400€</div>
+                 <hr class="descr">
+             </div>
+             <div id="av350">
+                 <div class="av">350€</div>
+                 <hr class="descr">
+             </div>
+         </div>
+         <v-sparkline
+            style="width: 93%; position: relative; left: 7%; margin-top: -120px"
+            :labels="averageMonthly.labels"
+            :label-size="averageMonthly.labelSize"
+            :value="averageMonthly.value"
+            :gradient="averageMonthly.gradient"
+            :smooth="averageMonthly.radius || false"
+            :padding="averageMonthly.padding"
+            :line-width="averageMonthly.width"
+            :stroke-linecap="averageMonthly.lineCap"
+            :gradient-direction="gradientDirection"
+            :fill="averageMonthly.fill"
+            :type="averageMonthly.type"
+            :auto-line-width="averageMonthly.autoLineWidth"
+            auto-draw
+            auto-draw-duration=3000
+            height=100
+        ></v-sparkline>
+        <div style="font-weight: bold;  font-size: 15px;">Jahr</div>
+        <br>
+
+
+
         <div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -139,6 +175,32 @@
 </template>
 
 <style>
+
+.av {
+    position: relative;
+    left: 4%;
+    top: 14px;
+}
+
+.descr {
+    width: 89%;
+    position: relative;
+    left: 9%;
+}
+
+#av350{
+    text-align: left; position: relative; top: 101px;
+}
+#av400 {
+    text-align: left; position: relative; top: 60px;
+}
+#av450 {
+    text-align: left; position: relative; top: 19px;
+}
+#av500 {
+    text-align: left; position: relative; top: -22px;
+}
+
 .box-statistic {
     border: 1px solid #b3e5fc; padding: 15px 20px 20px;
 }
@@ -151,6 +213,30 @@ td {
 }
 </style>
 <script>
+const yearsShort = [
+          '98',
+          '99',
+          '00',
+          '01',
+          '02',
+          '03',
+          '04',
+          '05',
+          '06',
+          '07',
+          '08',
+          '09',
+          '10',
+          '11',
+          '12',
+          '13',
+          '14',
+          '15',
+          '16',
+          '17',
+          '18'
+          ]
+
     import countTo from 'vue-count-to'
 
 
@@ -172,6 +258,20 @@ td {
              startVal: 0,
              endVal: 2001734000
          },
+         averageMonthly: {
+           width: 1,
+           radius: 1,
+           padding: 8,
+           lineCap: 'round',
+           gradient: ['#0288D1','#81D4FA'],
+           value: [316.3879, 321.4173, 325.5221, 364.9660, 370.7308, 369.9536, 371.0620, 375.4148, 375.2258, 375.1466, 398.2331, 433.9942, 436.1962, 451.8813, 447.6898, 446.3513, 447.6670, 448.1998, 463.6219, 499.1927, 492.8651],
+           gradientDirection: 'top',
+           fill: false,
+           type: 'trend',
+           autoLineWidth: false,
+           labels: yearsShort,
+           labelSize: 5
+         }
       }),
       methods: {
         onScrollGeld () {

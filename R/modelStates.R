@@ -19,8 +19,8 @@ bildung <- read_csv2("Zensus11_Datensatz_Bevoelkerung.csv", skip = 0, col_names 
 bildung[is.na(bildung)] <- 0
 bildung <- bildung %>% mutate(Akademiker = (Fachhochschulabschluss + Hochschulabschluss + Promotion)/Insgesamt) %>% select(Akademiker, Bundesland)
 
-curr_bafog <- bafog %>% filter(Jahr == 2009)
-curr_studis <- studis %>% filter(Jahr == calcWS(2009))
+curr_bafog <- bafog %>% filter(Jahr == 2008)
+curr_studis <- studis %>% filter(Jahr == calcWS(2008))
 
 df_model_Bundesland <- left_join(curr_studis, curr_bafog, by = "Bundesland") %>%
   mutate(Anteil_Bafog = gefordertePersonen / Studis)
@@ -32,7 +32,7 @@ df_model_Bundesland <- left_join(bildung, df_model_Bundesland, by = "Bundesland"
 ######### Model #########
 
 # Full model
-linearMod <- lm(Anteil_Bafog ~ Nettoeinkommen + Eltern + WG + Wohnheim + Privat + Akademiker, data=df_model_Bundesland)  
+linearMod <- lm(Anteil_Bafog ~ Nettoeinkommen + Eltern + WG + Wohnheim + Privat + Akademiker, data=df_model_Bundesland)
 summary(linearMod)
 
 # Stepwise selection
@@ -49,13 +49,13 @@ summary(gvmodel)
 cor(df_model_Bundesland$WG, df_model_Bundesland$Eltern)
 
 # Model without WG
-linearMod <- lm(Anteil_Bafog ~ Nettoeinkommen + Eltern + Akademiker, data=df_model_Bundesland)  
+linearMod <- lm(Anteil_Bafog ~ Nettoeinkommen + Eltern + Akademiker, data=df_model_Bundesland)
 summary(linearMod)
-# Akademiker no longer significant... 
+# Akademiker no longer significant...
 # Cook's distance -> Saarland is an outlier: High rates live with parents.
 
 # Model without Akademiker
-linearMod <- lm(Anteil_Bafog ~ Nettoeinkommen + Eltern, data=df_model_Bundesland)  
+linearMod <- lm(Anteil_Bafog ~ Nettoeinkommen + Eltern, data=df_model_Bundesland)
 summary(linearMod)
 plot(linearMod)
 

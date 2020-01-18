@@ -48,3 +48,54 @@ ggplot(data=full, aes(x=Jahr, y=full)) +
   geom_line(color="#03a9f4") +
   scale_x_continuous(breaks = c(1998:2018))+
   xlab("") + ylab("") + theme(text = element_text(size=16))
+
+
+###################################
+
+# Ideas
+
+# Gesamtausgaben
+i <- 1
+spent <- c()
+for (year in c(1998:2018)) {
+  semester <- calcWS(year)
+  currBafog <- bafog %>% filter(Jahr == year)
+  spent[i] <- sum(currBafog$Kosten)
+  i <- i + 1
+}
+plot(spent)
+
+
+# Entwicklung der deutschen Studierenden
+i <- 1
+de_studis <- c()
+for (year in c(1998:2018)) {
+  semester <- calcWS(year)
+  currStudis <- studis %>% filter(Jahr == semester)
+  de_studis[i] <- sum(currStudis$Studis)
+  i <- i + 1
+}
+plot(de_studis)
+
+
+
+
+# Average monthly bafog over time
+i <- 1
+mean_monthly <- c()
+for (year in c(1998:2018)) {
+  semester <- calcWS(year)
+  currBafog <- bafog %>% filter(Jahr == year)
+  mean_monthly [i] <- sum(currBafog$Kosten) * 1000 / sum(currBafog$Monatsbestand) / 12
+  i <- i + 1
+}
+mean_monthly <- data.frame(mean_monthly, 1998:2018)
+colnames(mean_monthly) <- c('year', 'mean')
+
+x11()
+ggplot(mean_monthly, aes(mean, year)) +
+  geom_line(color = "#03a9f4", size=2) +
+  scale_x_continuous(breaks = c(1998:2018)) +
+  theme(text = element_text(size=16)) +
+  xlab("") +
+  ylab("")
