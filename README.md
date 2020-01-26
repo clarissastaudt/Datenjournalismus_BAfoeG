@@ -1,4 +1,4 @@
-# Datenjournalismus: Visualisierung der BAföG-Zahlen
+# Data journalism: Visualizing BAföG
 
 This project explores datasets regarding BAföG (German student grant system). Emphasis is put on the development of the grant rate and average grant rate over time as well as differences between states.
 
@@ -33,6 +33,8 @@ The folder `website` contains all files for the project website, which was imple
 The resulting project website can be found under: [https://datenjournalismus-bafog.firebaseapp.com/#/](https://datenjournalismus-bafog.firebaseapp.com/#/)
 
 ## License
+
+This project was conducted during the winter term of 2019/2020 as part of the master cours "Daten - IT - Kommunikation" at Karlsruher Institut für Technologie.
 
 Concept and Implementation by:
 - Nina Neser (KIT)
