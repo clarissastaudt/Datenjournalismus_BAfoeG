@@ -14,6 +14,7 @@ calcWS <- function(year) {
 
 ###############################################################################################################################################
 
+# Loads shape data for Germany
 loadShapeGermany <- function() {
   area <- readOGR("gadm36_DEU_1.shp", encoding = "UTF-8", use_iconv = TRUE) %>% 
     fortify() %>%
@@ -29,9 +30,10 @@ loadShapeGermany <- function() {
 
 createRatioPlot <- function(year, colorscale) {
   
+  # Calc WS for given year
   semester <- calcWS(year)
 
-  # filter by year
+  # Filter by year
   curr_bafog <- bafog %>% filter(Jahr == year)
   curr_studis <- studis %>% filter(Jahr == semester)
   
@@ -39,8 +41,10 @@ createRatioPlot <- function(year, colorscale) {
   curr_area2 <- left_join(area2, curr_bafog, by = c("NAME_1" = "Bundesland"))
   curr_area2 <- left_join(curr_area2, curr_studis, by = c("NAME_1" = "Bundesland"))
   
-  # Wertebereich für 1998 - 2019: 15 - 45% 
-  # Bei 5er Schritten: 7 Farbwerte
+  # Plot map 
+  # Axis titles and descriptions are added in html
+  # Data is in interval 15 - 45% 
+  # -> Dividing this into intervals of five yields seven colors 
   x11()
   autoplot(osmmap) + 
     geom_rect(mapping=aes(xmin=620000, xmax=Inf, ymin=5900000, ymax=Inf), fill="white", color="white", alpha=1) +
@@ -56,16 +60,17 @@ createRatioPlot <- function(year, colorscale) {
     labs(x = "", y = "", fill = "") + #, title = year
     scale_fill_manual(values=colorscale)+
     theme_void() +
-    theme(legend.position = "bottom")#legend.position="none")
+    theme(legend.position="none")
 }
 
 ###############################################################################################################################################
 
-# Values for JS visualisation of Germany wide ratio development over the years
+# Values for javascript visualisation of Germany wide ratio development over the years
 calcPercantageGermany <- function(bafog, studis) {
   i <- 1
   gefordert <- c()
   for (year in c(1998:2018)) {
+    
     semester <- calcWS(year)
     currStudis <- studis %>% filter(Jahr == semester)
     currBafog <- bafog %>% filter(Jahr == year)

@@ -14,7 +14,7 @@
 
                     <v-col class="text-center" cols="6" style="background-color: rgba(3, 169, 244, 0.9)">
                       <h1 class="font-weight-thin white--text" id="header">BAföG</h1>
-                       <h1 class="font-weight-thin white--text display-2 mt-n6">für alle?</h1>
+                       <h1 class="font-weight-thin white--text display-2 mt-n6" id="subtitleheader">für alle?</h1>
                        <br>
                        <br>
                     </v-col>
@@ -49,7 +49,9 @@
       <v-card-text class="white--text pt-0" style="width: 100vw">
         <br>
         <p>
-          Dieses Projekt entsteht zur Zeit im Rahmen des Mastermoduls "Daten - IT - Kommunikation" am Karlsruher Institut für Technologie.
+          Dieses Projekt entstand im Wintersemester 2019/2020 <br>
+          im Rahmen des Mastermoduls "Daten - IT - Kommunikation" <br>
+          am Karlsruher Institut für Technologie.
         </p>
 
         <div>
@@ -76,6 +78,25 @@
   </v-app>
 </template>
 
+<style>
+    #header {
+      font-size: 10em;
+    }
+    @media (max-width: 960px) {
+        #header {
+          font-size: 14vw;
+        }
+        #subtitleheader {
+            font-size: 7vw !important;
+        }
+    }
+    @media (max-width: 600px) {
+        body {
+            border-top: 0px solid white ;
+        }
+    }
+</style>
+
 <script>
 
 export default {
@@ -92,8 +113,3 @@ export default {
   }
 };
 </script>
-<style>
-    #header {
-      font-size: 10em
-    }
-</style>
