@@ -34,7 +34,7 @@ The resulting project website can be found under: [https://datenjournalismus-baf
 
 ## License
 
-This project was conducted during the winter term of 2019/2020 as part of the master cours "Daten - IT - Kommunikation" at Karlsruher Institut für Technologie.
+This project was conducted during the winter term of 2019/2020 as part of the master course "Daten - IT - Kommunikation" at Karlsruher Institut für Technologie.
 
 Concept and Implementation by:
 - Nina Neser (KIT)
