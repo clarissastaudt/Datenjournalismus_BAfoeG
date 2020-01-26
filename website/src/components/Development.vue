@@ -2,7 +2,7 @@
     <div style="text-align: center;">
 
 
-          <h1 class="font-weight-light light-blue--text" style="text-align:left">Bekommen heute weniger Studierende BAföG?</h1>
+          <h1 class="font-weight-light light-blue--text" >Bekommen heute weniger Studierende BAföG?</h1>
 
             <v-container
                 id="scroll-target"
@@ -12,8 +12,8 @@
 
 
             <div id="dev_graph">
-                <h3 style="text-align:left; width: 93%; position: relative; left: 7%" v-scroll="onScrollVerlauf">
-                    Deutschlandweite Entwicklung des Anteils der BAföG-Empfänger*innen unter den Studierenden
+                <h3 style="text-align:center; width: 93%; position: relative; left: 7%" v-scroll="onScrollVerlauf">
+                    Deutschlandweite Entwicklung des Anteils <br>der BAföG-Empfänger*innen unter den Studierenden
                 </h3>
                 <div id="dev-y-axis">
                     Anteil der <br>BAföG-Empfänger*innen
@@ -282,7 +282,7 @@
                <div class="pa-5" v-if="slider.value == 45">
                    <h2>2007</h2>
                    <p class="year-texts">
-                       In die&shy;sem Jahr füh&shy;ren wei&shy;tere Bun&shy;des&shy;län&shy;er all&shy;emeine Studien&shy;ge&shy;bühren ein.
+                       In die&shy;sem Jahr füh&shy;ren wei&shy;tere Bun&shy;des&shy;län&shy;er all&shy;ge&shy;meine Studien&shy;ge&shy;bühren ein.
                        Für das Som&shy;mer&shy;se&shy;mester wer&shy;den die Ge&shy;büh&shy;ren in den Bun&shy;des&shy;län&shy;der Ba&shy;den-Württem&shy;berg, Bayern und Ham&shy;burg ein&shy;ge&shy;führt.
                        Für das Winter&shy;se&shy;mester 2007/2008 ent&shy;schei&shy;den sich Saar&shy;land und Hessen auch für die Ein&shy;füh&shy;rung der Studien&shy;ge&shy;bühren.
                   </p>
@@ -330,7 +330,7 @@
                <div class="pa-5" v-if="slider.value == 75">
                    <h2>2013</h2>
                    <p class="year-texts">
-                       Ob&shy;wohl die För&shy;der&shy;si&shy;tu&shy;ation sich zum Vor&shy;jahr nicht stark ver&shy;ändert hat, konn&shy;ten sich Bund und Län&shy;der nicht auf eine Ver&shy;ände&shy;rung des BAföGs ei&shy;nigen.
+                        Bund und Län&shy;der kön&shy;nen sich nicht auf eine Ver&shy;ände&shy;rung des BAföGs ei&shy;nigen.
                    </p>
                </div>
                <div class="pa-5" v-if="slider.value == 80">
@@ -342,13 +342,13 @@
                <div class="pa-5" v-if="slider.value == 85">
                    <h2>2015</h2>
                    <p class="year-texts">
-                       Im Rah&shy;men des 25. BAföG-Än&shy;derungs&shy;ge&shy;setz wird die BAföG-Fi&shy;nan&shy;zierung voll&shy;stän&shy;dig durch den Bund über&shy;nom&shy;men.
+                       Im Rah&shy;men des 25. BAföG-Än&shy;derungs&shy;ge&shy;setzes wird die BAföG-Fi&shy;nan&shy;zierung voll&shy;stän&shy;dig durch den Bund über&shy;nom&shy;men.
                    </p>
                </div>
                <div class="pa-5" v-if="slider.value == 90">
                    <h2>2016</h2>
                    <p class="year-texts">
-                       Die Ver&shy;än&shy;derun&shy;gen des 25. BAföG-Än&shy;de&shy;rungs&shy;gesetz grei&shy;fen.
+                       Die Ver&shy;än&shy;derun&shy;gen des 25. BAföG-Än&shy;de&shy;rungs&shy;gesetzes grei&shy;fen.
                        Die Ein&shy;kommens&shy;frei&shy;be&shy;trä&shy;ge der El&shy;tern wer&shy;den er&shy;höht und ei&shy;gen&shy;es Ver&shy;mö&shy;gen bis 7.500 Euro wird nicht mehr be&shy;rück&shy;sich&shy;tigt.
                        Das von der Bun&shy;des&shy;re&shy;gie&shy;rung de&shy;fi&shy;nier&shy;te Ziel, 110.000 Ge&shy;för&shy;derte zu&shy;sätzlich zu ge&shy;ne&shy;rie&shy;ren, wird je&shy;doch ver&shy;fehlt.
                    </p>
@@ -620,7 +620,7 @@
                                     </span>
                                     Abgerufen unter:
                                     <a href="https://www-genesis.destatis.de/genesis/online/data?operation=find&suchanweisung_language=de&query=21311-0005">
-                                        https://www-genesis.destatis.de/&#8203;genesis/&#8203;online/&#8203;data?operation=find&suchanweisung_language=de&query=21311-0005
+                                        https://www-genesis.destatis.de/&#8203;genesis/&#8203;online/&#8203;data?operation=find&suchanweisung_language=de&&#8203;query=21311-0005
                                     </a>.
                                 </li>
                                 <li>
@@ -630,7 +630,7 @@
                                   </span>
                                   Abgerufen unter:
                                   <a href="https://www-genesis.destatis.de/genesis/online/data?operation=find&suchanweisung_language=de&query=+21411-0002">
-                                      https://www-genesis.destatis.de/&#8203;genesis/&#8203;online/&#8203;data?operation=find&suchanweisung_language=de&query=+21411-0002
+                                      https://www-genesis.destatis.de/&#8203;genesis/&#8203;online/&#8203;data?operation=find&suchanweisung_&#8203;language=de&&#8203;query=+21411-0002
                                   </a>.
                               </li>
                               <li>
@@ -641,7 +641,7 @@
                                   Abgerufen unter:
                                   <a href="https://www.bafoeg-rechner.de/Hintergrund/geschichte.php#stat">
                                       https://www.bafoeg-rechner.de/&#8203;Hintergrund/&#8203;geschichte.php#stat
-                                  </a>
+                                  </a>.
                               </li>
                             </ul>
                         </div>
@@ -671,11 +671,11 @@
           <div style="text-align: justify">
 
               Im Ver&shy;lauf der Zeit ist ein Unter&shy;schied zwi&shy;schen den neu&shy;en und al&shy;ten Bun&shy;des&shy;län&shy;dern bei der För&shy;der&shy;quote er&shy;kennbar.
-              Bei der Aus&shy;wahl des Studie&shy;nortes bleibt die Mehr&shy;heit der Studie&shy;renden im ei&shy;genen Bundes&shy;land oder im Nach&shy;bar&shy;bun&shy;des&shy;land.
-              Daher lässt sich ver&shy;muten, dass die niedri&shy;geren Ein&shy;kommen im Os&shy;ten für einen Teil der höhe&shy;ren Förder&shy;quote ver&shy;ant&shy;wortlich sind.
+              Bei der Aus&shy;wahl des Studie&shy;nortes bleibt die Mehr&shy;heit der Studie&shy;renden im ei&shy;genen Bundes&shy;land oder zieht in ein Nach&shy;bar&shy;bun&shy;des&shy;land.
+              Daher lässt sich ver&shy;muten, dass die niedri&shy;geren Ein&shy;kommen der Eltern im Os&shy;ten für einen Teil der höhe&shy;ren Förder&shy;quote ver&shy;ant&shy;wortlich sind.
               Bei den west&shy;lichen Bundes&shy;ländern bil&shy;den Schles&shy;wig-Holstein, Saar&shy;land, Nieder&shy;sachsen und Rhein&shy;land-Pfalz die Schluss&shy;lichter bei den durch&shy;schnitt&shy;lichen Ein&shy;kommen.
               Dies spie&shy;gelt sich bei den BAföG-Förder&shy;quoten ent&shy;sprechend eben&shy;falls wieder, be&shy;sonders ab etwa 2005.
-              Das Saar&shy;land bil&shy;det hierbei eine Auß&shy;nahme auf&shy;grund der Grö&shy;ße des Bundes&shy;landes.
+              Das Saar&shy;land bil&shy;det dabei eine Auß&shy;nahme auf&shy;grund der geringen Grö&shy;ße des Bundes&shy;landes.
               Es gibt hier nur eine Uni&shy;ver&shy;sität und dem&shy;ent&shy;spre&shy;chend ver&shy;hältnis&shy;mäßig wenig Studie&shy;rende.
               Aus&shy;reißer können hier&shy;bei stärker ins Ge&shy;wicht fal&shy;len.
 

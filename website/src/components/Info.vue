@@ -1,6 +1,6 @@
 <template>
     <div style="text-align:left">
-        <h1 class="font-weight-light light-blue--text">Was ist eigentlich BAföG?</h1>
+        <h1 class="font-weight-light light-blue--text" style="text-align:center">Was ist eigentlich BAföG?</h1>
         <br>
         <div style="text-align: justify">
             <p>
@@ -22,7 +22,7 @@
                 Rei&shy;chen die finan&shy;ziellen Mit&shy;tel der Fami&shy;lie nicht aus, wird eine Voll&shy;för&shy;de&shy;rung ge&shy;währt.
                 Um BAföG zu be&shy;zie&shy;hen, muss ein Nach&shy;weis über eine Auf&shy;nahme an einer Schu&shy;le oder einer Hoch&shy;schule er&shy;bracht wer&shy;den.
                 Ab dem 5. Se&shy;mester müs&shy;sen zu&shy;sätzlich Leis&shy;tungs&shy;nach&shy;weise an das BAföG-Amt ge&shy;schickt wer&shy;den.
-                Fünf Jah&shy;re nach dem En&shy;de der För&shy;derungs&shy;höchst&shy;dauer muss mit der Rück&shy;zah&shy;lung der im Stu&shy;diun er&shy;hal&shy;tenen BAföG-För&shy;derung be&shy;gonnen wer&shy;den.
+                Fünf Jah&shy;re nach dem En&shy;de der För&shy;derungs&shy;höchst&shy;dauer muss mit der Rück&shy;zah&shy;lung der im Stu&shy;dium er&shy;hal&shy;tenen BAföG-För&shy;derung be&shy;gonnen wer&shy;den.
                 Dabei wer&shy;den durch den Staat kei&shy;ne Zin&shy;sen be&shy;rechnet.
             </p>
 
@@ -61,7 +61,7 @@
                                       Abgerufen unter:
                                      <a href="https://www.xn--bafg-7qa.de/de/welche-bedarfssaetze-sieht-das-bafoeg-vor--375.php">
                                          https://www.xn--bafg-7qa.de/&#8203;de/&#8203;welche-bedarfssaetze-sieht-das-bafoeg-vor--375.php
-                                     </a>
+                                     </a>.
                                  </li>
                                  <li>
                                      Bundesministerium für Bildung und Forschung (2020).
@@ -71,7 +71,7 @@
                                       Abgerufen unter:
                                      <a href="https://www.xn--bafg-7qa.de/de/darlehensrueckzahlung-200.php">
                                          https://www.xn--bafg-7qa.de/&#8203;de/&#8203;darlehensrueckzahlung-200.php
-                                     </a>
+                                     </a>.
                                  </li>
                             </ul>
                          </p>

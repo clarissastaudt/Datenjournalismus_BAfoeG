@@ -1,6 +1,6 @@
 <template>
     <div style="text-align:left">
-        <h1 class="font-weight-light light-blue--text">Wie geht es mit dem BAföG weiter?</h1>
+        <h1 class="font-weight-light light-blue--text" style="text-align:center">Wie geht es mit dem BAföG weiter?</h1>
         <br>
         <div style="text-align: justify">
                         <p>
@@ -50,7 +50,7 @@
                                       Abgerufen unter:
                                      <a href="https://www.xn--bafg-7qa.de/de/bafoeg-reform-das-aendert-sich-622.php">
                                          https://www.xn--bafg-7qa.de/&#8203;de/&#8203;bafoeg-reform-das-aendert-sich-622.php
-                                     </a>
+                                     </a>.
                                  </li>
 
                             </ul>

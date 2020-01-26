@@ -20,9 +20,9 @@ project
 └─── website
 │   │   ...
 ```
-The project is divided into three subfolders. 
+The project is divided into three subfolders.
 
-`data` contains the raw BAföG datasets. 
+`data` contains the raw BAföG datasets.
 
 `R` consists of all R files handling the statistical analysis of the data, whereby `development.R` deals with all analysis regarding the development of the grant rate over time. `money.R` conducts calculations concerning financial data, e.g. the development of the average monthly granted sum of money over time. `helpers.R` contains functions, which are shared between the other two scripts.
 
@@ -37,10 +37,10 @@ The resulting project website can be found under: [https://datenjournalismus-baf
 This project was conducted during the winter term of 2019/2020 as part of the master course "Daten - IT - Kommunikation" at Karlsruher Institut für Technologie.
 
 Concept and Implementation by:
+- Alina Burlakov (KIT)
+- Clarissa Staudt (FU and TU Berlin)
+- Marcus Mikorski (KIT)
 - Nina Neser (KIT)
 - Sun Mengqiong (KIT)
-- Alina Burlakov (KIT)
-- Marcus Mikorski (KIT)
-- Clarissa Staudt (FU and TU Berlin)
 
 Distributed under GPLv3 License. See [LICENSE](LICENSE) for more information.

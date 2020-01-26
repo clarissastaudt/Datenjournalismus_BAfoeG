@@ -57,7 +57,7 @@
         <div>
           <div>
 
-            <p>Nina Neser <br>Sun Mengqiong <br>Alina Burlakov <br>Marcus Mikorski <br>Clarissa Staudt</p>
+            <p>Alina Burlakov<br>Clarissa Staudt<br>Marcus Mikorski<br>Nina Neser<br>Sun Mengqiong<br></p>
           </div>
         </div>
 

@@ -26,7 +26,7 @@
                   </p>
                   <br>
                   <p id="authors">
-                      Von <span>Nina Neser</span>, <span>Sun Mengqiong</span>, <span>Alina Burlakov</span>, <span>Marcus Mikorski</span> und <span>Clarissa Staudt</span>
+                      Von <span>Alina Burlakov</span>, <span>Clarissa Staudt</span>, <span>Marcus Mikorski</span>, <span>Nina Neser</span> und <span>Sun Mengqiong</span>
                   </p>
               </blockquote>
 
@@ -57,7 +57,6 @@
     }
 
     #summary {
-        font-size: 150%;
         text-align: justify;
         line-height: 1.3;
     }

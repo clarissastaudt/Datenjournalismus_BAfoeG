@@ -1,6 +1,6 @@
 <template>
     <div style="text-align: center;">
-        <h1 class="font-weight-light light-blue--text" style="text-align:left">Wer bekommt wie viel Geld?</h1>
+        <h1 class="font-weight-light light-blue--text" style="text-align:center">Wer bekommt wie viel Geld?</h1>
         <br>
         <v-layout id="counter">
             <v-row>
@@ -39,7 +39,7 @@
          <br>
 
          <div id="av_monthly_graph">
-             <h3 style="text-align:left; width: 93%; position: relative; left: 7%">
+             <h3 style="text-align:center; width: 93%; position: relative; left: 7%">
                  Mittlerer monatlicher BAföG-Satz im Zeitverlauf
              </h3>
              <div id="money-y-axis">
@@ -169,7 +169,7 @@
             <v-flex md8 sm12 offset-md2 v-if="slider_money.value==50">
                 <h2>2008</h2>
                 <p class="year-texts">
-                    2008 gab es nach sie&shy;ben Jah&shy;ren end&shy;lich wieder eine BAföG-Er&shy;höhung.
+                    2008 gibt es nach sie&shy;ben Jah&shy;ren end&shy;lich wieder eine BAföG-Er&shy;höhung.
                     Der Höchst&shy;satz wird auf 670 Euro mo&shy;nat&shy;lich an&shy;ge&shy;hoben.
                     Außer&shy;dem sind  Master&shy;studie&shy;rende nun bis zum 35. Lebens&shy;jahr BAföG-be&shy;rechtigt.
                 </p>
@@ -204,15 +204,15 @@
             <v-flex md8 sm12 offset-md2 v-if="slider_money.value==75">
                 <h2>2013</h2>
                 <p class="year-texts">
-                    Obwohl die Förder&shy;si&shy;tuation sich zum Vor&shy;jahr nicht stark ver&shy;ändert hat, konnten sich Bund und Län&shy;der nicht auf eine Ver&shy;än&shy;derung des BAföGs einigen.
+                    Obwohl die Förder&shy;si&shy;tuation sich zum Vor&shy;jahr nicht stark ver&shy;ändert hat, können sich Bund und Län&shy;der nicht auf eine Ver&shy;än&shy;derung des BAföGs einigen.
                 </p>
             </v-flex>
             <v-flex md8 sm12 offset-md2 v-if="slider_money.value==80">
                 <h2>2014</h2>
                 <p class="year-texts">
                     In die&shy;sem Jahr tritt das 25. BAföG-Än&shy;derungs&shy;ge&shy;setz in Kraft.
-                    Der Bund über&shy;nimmt dann ab dem 1. Ja&shy;nuar 2015 die kom&shy;plette Fi&shy;nan&shy;zie&shy;rung des BAföGs.
-                    Die ge&shy;plan&shy;te Er&shy;höhung um je&shy;weils 7% der Be&shy;darfs&shy;sätze der Bun&shy;des&shy;bil&shy;dungs&shy;för&shy;derung und der Ein&shy;kom&shy;mens&shy;frei&shy;be&shy;trä&shy;ge der El&shy;tern tre&shy;ten aber erst zum Win&shy;ter&shy;se&shy;mes&shy;ter 2016/2017 in Kraft.
+                    Der Bund über&shy;nimmt ab dem 1. Ja&shy;nuar 2015 die kom&shy;plette Fi&shy;nan&shy;zie&shy;rung des BAföGs.
+                    Die ge&shy;plan&shy;te Er&shy;höhung um je&shy;weils 7% der Be&shy;darfs&shy;sätze der Bun&shy;des&shy;aus&shy;bil&shy;dungs&shy;för&shy;derung und der Ein&shy;kom&shy;mens&shy;frei&shy;be&shy;trä&shy;ge der El&shy;tern tre&shy;ten aber erst zum Win&shy;ter&shy;se&shy;mes&shy;ter 2016/2017 in Kraft.
                     Für je&shy;des ei&shy;gene Kind im ei&shy;genen Haus&shy;halt sol&shy;len Stu&shy;dieren&shy;de ab dann 130 Euro be&shy;kom&shy;men.
                     Beim Wohn&shy;geld&shy;zu&shy;schlag soll es zu einer Er&shy;höhung auf 250 Euro kom&shy;men.
                     Mini&shy;job-Ein&shy;kommen bis zu 450 Euro im Monat sol&shy;len an&shy;rechnungs&shy;frei wer&shy;den.
@@ -346,7 +346,7 @@
                                     Abgerufen unter:
                                    <a href="https://www.xn--bafg-7qa.de/de/welche-bedarfssaetze-sieht-das-bafoeg-vor--375.php">
                                        https://www.xn--bafg-7qa.de/&#8203;de/&#8203;welche-bedarfssaetze-sieht-das-bafoeg-vor--375.php
-                                   </a>
+                                   </a>.
                                </li>
                                <li>
                                  Bundesverfassungsgericht (2005).
@@ -518,7 +518,7 @@
                                 </span>
                                 Abgerufen unter:
                                 <a href="https://www-genesis.destatis.de/genesis/online/data?operation=find&suchanweisung_language=de&query=+21411-0002">
-                                    https://www-genesis.destatis.de/&#8203;genesis/&#8203;online/&#8203;data?operation=find&suchanweisung_language=de&query=+21411-0002
+                                    https://www-genesis.destatis.de/&#8203;genesis/&#8203;online/&#8203;data?operation=find&suchanweisung_language=&#8203;de&query=&#8203;+21411-0002
                                 </a>.
                             </li>
                           </ul>
@@ -596,7 +596,7 @@
                                         Abgerufen unter:
                                        <a href="https://www.studentenwerke.de/de/content/studie-baf%C3%B6g-bedarfss%C3%A4tze-zu-niedrig">
                                            https://www.studentenwerke.de/&#8203;de/&#8203;content/&#8203;studie-baf%C3%B6g-bedarfss%C3%A4tze-zu-niedrig
-                                       </a>
+                                       </a>.
                                    </li>
                               </ul>
                            </p>
