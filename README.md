@@ -1,6 +1,6 @@
 # Data journalism: Visualizing BAföG
 
-This project explores datasets regarding BAföG (German student grant system). Emphasis is put on the development of the grant rate and average grant rate over time as well as differences between states.
+This project explores datasets regarding BAföG (German student grant system). Emphasis is put on the development of the grant rate and average granted sum over time as well as differences between states.
 
 ## Structure
 ```
