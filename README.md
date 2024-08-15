@@ -30,7 +30,7 @@ The folder `website` contains all files for the project website, which was imple
 
 ## Results
 
-The resulting project website can be found under: [https://datenjournalismus-bafog.firebaseapp.com/#/](https://datenjournalismus-bafog.firebaseapp.com/#/)
+The resulting project website can be found under: [https://datenjournalismus-bafoeg.web.app/#/](https://datenjournalismus-bafoeg.web.app/#/)
 
 ## License
 
